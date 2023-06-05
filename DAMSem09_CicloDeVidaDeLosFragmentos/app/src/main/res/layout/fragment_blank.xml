@@ -7,8 +7,9 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="155dp"
+        android:layout_height="43dp"
         android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

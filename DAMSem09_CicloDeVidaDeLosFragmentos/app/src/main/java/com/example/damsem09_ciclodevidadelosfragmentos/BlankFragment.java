@@ -1,9 +1,12 @@
 package com.example.damsem09_ciclodevidadelosfragmentos;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,13 +55,22 @@ public class BlankFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
+        }
+        Log.i("CICLO DE VIDA", "Fragmento está onCreate");
+
+    }
+    @Override
+    public  void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        Log.i("CICLO DE VIDA ", "Fragmento esta en onAttach");
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.i("CICLO DE VIDA", "Fragmento está onCreateView");
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 }
