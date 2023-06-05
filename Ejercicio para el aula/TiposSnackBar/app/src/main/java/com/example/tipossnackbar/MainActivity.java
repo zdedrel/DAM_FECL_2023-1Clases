@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Snackbar.make(v, "Mostrando tipo corto", Snackbar.LENGTH_SHORT).show();
         }
         if(v.getId()==R.id.medio){
-            Snackbar.make(v, "Mostrando tipo medio", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Mostrando tipo largo", Snackbar.LENGTH_LONG).show();
         }
         if(v.getId()==R.id.largo){
-            Snackbar.make(v, "Mostrando tipo largo", Snackbar.LENGTH_INDEFINITE).show();
+            Snackbar.make(v, "Mostrando tipo indefinido", Snackbar.LENGTH_INDEFINITE).show();
         }
 
     }
