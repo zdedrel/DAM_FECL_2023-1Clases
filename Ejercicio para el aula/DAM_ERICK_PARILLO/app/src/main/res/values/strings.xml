@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DAM_ERICK_PARILLO</string>
+    <string name="titulo">Titulo</string>
+    <string name="Titulo">Examen Admision 2023-1</string>
+    <string name="Nombres">Apellidos y Nombres</string>
+    <string name="apellidos" />
+    <string name="correo">Correo Electronico</string>
+    <string name="email" />
+    <string name="txtclave" />
+    <string name="textclave">Clave</string>
+    <string name="txt_clave" />
+    <string name="txtfecha">Fecha de nacimiento</string>
+    <string name="txt_carrera">Carrera</string>
+    <string name="sistemas">Ingenieria de Sistemas</string>
+    <string name="ambiental">Ingenieria Ambiental</string>
+    <string name="mecanica">Ingeniera Mecanica</string>
+    <string name="admi">Administracion</string>
+    <string name="Ultima">¿Por qué  medio se entero de la convocatoria</string>
+    <string name="radio">Radio</string>
+    <string name="internet">Internet</string>
+    <string name="amigo">Amigo</string>
+    <string name="publicidad">Publicidad</string>
+    <string name="enviar">Enviar</string>
+    <string name="emaila">" Correo Electronico"</string>
+</resources>
