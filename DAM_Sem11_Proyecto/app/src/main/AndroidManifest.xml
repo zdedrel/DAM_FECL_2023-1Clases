@@ -12,10 +12,6 @@
         android:theme="@style/Theme.DAM_Sem11_Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".NotasActivity"
-            android:exported="false"
-            android:label="@string/title_activity_notas" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NotasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_notas" />
     </application>
 
 </manifest>

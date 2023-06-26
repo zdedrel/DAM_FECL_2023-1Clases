@@ -7,22 +7,28 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dam_sem11_proyecto.placeholder.PlaceholderContent;
+
 
 /**
  * A fragment representing a list of Items.
  */
+import java.util.ArrayList;
+import java.util.List;
 public class NotaFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 1;
+    private int mColumnCount = 2;
+    private List<Nota> notaList;
+    private NotasInteractionListener mListener;
+    private MyNotaRecyclerViewAdapter adapterNotas;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -62,10 +68,32 @@ public class NotaFragment extends Fragment {
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
+                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(mColumnCount, StaggeredGridLayoutManager.VERTICAL));
             }
-            recyclerView.setAdapter(new MyNotaRecyclerViewAdapter(PlaceholderContent.ITEMS));
+            //recyclerView.setAdapter(new MyNotaRecyclerViewAdapter(PlaceholderContent.ITEMS));
+            notaList = new ArrayList<>();
+            notaList.add(new Nota("Lista de la compra","comprar pan tostado", true, android.R.color.holo_blue_light));
+            notaList.add(new Nota("Recordar", "He aparcado el coche en la calle República Argentina, no olvidarme en el parque",false, android.R.color.holo_green_light));
+            notaList.add(new Nota("cumpleaños (fiesta)","no olvidar las velas", true, android.R.color.holo_orange_light));
+
+            adapterNotas = new MyNotaRecyclerViewAdapter( notaList , mListener);
+            recyclerView.setAdapter(adapterNotas);
+
         }
         return view;
     }
+    @Override
+    public void  onAttach(Context context){
+        super.onAttach(context);
+        if(context instanceof NotasInteractionListener){
+            mListener = (NotasInteractionListener) context;
+        }else{
+            throw new RuntimeException(context.toString()
+                    + "Debe implementarse NotasInteractionListener");
+        }
+    }
 }
+
+
+
+
