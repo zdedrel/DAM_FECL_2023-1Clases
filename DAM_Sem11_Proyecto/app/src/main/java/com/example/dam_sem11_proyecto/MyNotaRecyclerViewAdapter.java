@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.dam_sem11_proyecto.databinding.FragmentNotaBinding;
+//import com.example.dam_sem11_proyecto.databinding.FragmentNotaBinding;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_nota, parent, false);
+                .inflate(R.layout.fragment_item, parent, false);
         return new ViewHolder(view);
       //  return new ViewHolder(FragmentNotaBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
 
@@ -44,7 +44,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         if(holder.mItem.isFavorita()) {
             holder.ivFavorita.setImageResource(R.drawable.baseline_star_border_24);
         }
-        holder.ivFavorita.setOnClickListener((v)->{
+        holder.ivFavorita.setOnClickListener(v->{
             if(null != mListener){
                 mListener.favoritaNotaClick(holder.mItem);
             }
