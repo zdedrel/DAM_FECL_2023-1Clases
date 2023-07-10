@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Definir el evento click sobre el botón Login
-        btnLogin = findViewById(R.id.buttonLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-           @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, NotasActivity.class);
-                startActivity(i);
-            }
-        });
+            btnLogin = findViewById(R.id.buttonLogin);
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this , NotasActivity.class);
+                    startActivity(i);
+                }
+            });
 
     }
 

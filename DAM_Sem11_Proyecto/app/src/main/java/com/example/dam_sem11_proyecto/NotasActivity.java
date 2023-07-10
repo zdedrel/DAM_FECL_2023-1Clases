@@ -12,10 +12,9 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.dam_sem11_proyecto.databinding.ActivityNotasBinding;
 
-public class NotasActivity extends AppCompatActivity implements NotasInteractionListener {
+public class NotasActivity extends AppCompatActivity implements  NotasInteractionListener {
 
     private ActivityNotasBinding binding;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class NotasActivity extends AppCompatActivity implements NotasInteraction
     }
 
     @Override
-    public void favoritaNotaClick(Nota nota) {
+    public void favoritaNotaclick(Nota nota) {
 
     }
 }

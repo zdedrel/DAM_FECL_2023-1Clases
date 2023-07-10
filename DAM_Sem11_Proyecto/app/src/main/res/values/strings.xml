@@ -9,4 +9,5 @@
     <string name="title_user_profile">Mi perfil</string>
     <string name="Titulo">Titulo</string>
     <string name="contenido">contenido</string>
+    <string name="title_activity_nota">Nota</string>
 </resources>

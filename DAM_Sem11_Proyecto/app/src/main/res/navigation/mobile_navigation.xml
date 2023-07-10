@@ -19,7 +19,6 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-
         android:name="com.example.dam_sem11_proyecto.NotaFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_item_list" />
